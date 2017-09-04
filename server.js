@@ -30,7 +30,7 @@ var articles = {
 };
 
 function createTemplate(data){
-   // var title = data.title;
+    var title = data.title;
     var head = data.head;
     var p = data.p;
     
@@ -40,12 +40,12 @@ function createTemplate(data){
            
             <head>
                 <link href="/ui/style.css" rel="stylesheet" />
-              //  <title> $title </title>
+                <title>$title</title>
                
             </head>
             <body>
-                <h3> $head </h3>
-               <p> $p  </p>
+                <h3>$head</h3>
+               <p>$p</p>
             </body>
         </html>`;
 }
