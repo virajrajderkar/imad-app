@@ -15,7 +15,7 @@ app.get('/:articleName', function (req, res) {
 });
 
 var articles = { 
-    '/article-one' :{
+    'article-one' :{
         title: 'article-one',
         head : 'nArticle One',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
