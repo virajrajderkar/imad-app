@@ -9,9 +9,47 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articleone', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(articles[articleName]));
 });
+
+var articles = { 
+    'Article-one' :{
+        title : 'Article-one',
+        head : 'nArticle One',
+        p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
+    'Article-two' :{
+        title : 'Article-Two',
+        head : 'Article Two',
+        p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
+    'Article-three' :{
+        title : 'Article-Three',
+        head : 'Article Three',
+        p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'}
+};
+
+function createTemplate(data){
+    var title = data.title;
+    var head = data.head;
+    var p = data.p;
+    
+    var htmlTemplate =
+       ` <!doctype html>
+        <html>
+           
+            <head>
+                <link href="/ui/style.css" rel="stylesheet" />
+                <title> $title </title>
+               
+            </head>
+            <body>
+                <h3> $head </h3>
+               <p> $p  </p>
+            </body>
+        </html>`;
+}
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
