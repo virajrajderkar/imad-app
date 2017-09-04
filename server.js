@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
-  res.send(createTemplate(articles['article-one']));
+  res.send(createTemplate(articles[articleName]));
 });
 
 var articles = { 
@@ -19,11 +19,11 @@ var articles = {
         title: 'article-one',
         head : 'nArticle One',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
-    '/article-two' :{
+    'article-two' :{
         title : 'Article-Two',
         head : 'Article Two',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
-    '/article-three' :{
+    'article-three' :{
         title : 'Article-Three',
         head : 'Article Three',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'}
@@ -48,6 +48,8 @@ function createTemplate(data){
                <p>$p</p>
             </body>
         </html>`;
+        
+    return htmlTemplate;
 }
 
 
