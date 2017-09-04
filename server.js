@@ -15,15 +15,15 @@ app.get('/:articleName', function (req, res) {
 });
 
 var articles = { 
-    '/Article-one' :{
-        title:'Article-one',
+    '/article-one' :{
+        title: 'article-one',
         head : 'nArticle One',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
-    '/Article-two' :{
+    '/article-two' :{
         title : 'Article-Two',
         head : 'Article Two',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'},
-    '/Article-three' :{
+    '/article-three' :{
         title : 'Article-Three',
         head : 'Article Three',
         p : 'hfdauishfhl vuwoih  uh huhu uhujh hu h'}
